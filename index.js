@@ -8,6 +8,7 @@ $(function(){
 
     $getcode.click(function(){
         var timer,num = 10;
+        $('#test-message').html('');
         $getcode.attr("disabled",true);
         timer = setInterval(function(){
             num--;
@@ -16,7 +17,7 @@ $(function(){
                 $getcode.val("获取验证码");
                 $getcode.removeAttr('disabled');
                 if($test.val() === ''){
-                    $('#test-message').html('请求超时，请稍后再试')
+                    $('#test-message').html('请求超时，请稍后再试');
                 }
             }
             else{
